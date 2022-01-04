@@ -19,17 +19,6 @@
     overflow-x: scroll;
 }
 
-.orgContainer::-webkit-scrollbar{
-    display: inline;
-    height: 4px;
-}
-.orgContainer::-webkit-scrollbar-thumb{
-    background-color: white;
-}
-.orgContainer::-webkit-scrollbar-track{
-    background-color: rgba(77, 77, 77, 0.5);
-}
-
 .divider{
     position: relative;
     height: 100px;
@@ -189,9 +178,9 @@
 
 .orgButton:hover{
     background-color: #eee9e6;
-    box-shadow: 0px 2px 15px #eee9e6,
-                0px 2px 25px #eee9e69b,
-                0px 2px 45px #eee9e659;
+    box-shadow: 0px 2px 10px #EEE9E686,
+                0px 2px 20px #EEE9E672,
+                0px 2px 40px #EEE9E649;
     color: #46474B;
 }
 

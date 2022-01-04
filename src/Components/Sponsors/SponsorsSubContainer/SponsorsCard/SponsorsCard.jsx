@@ -4,7 +4,7 @@ import './SponsorsCard.css';
 function SponsorsCard(props){
     return (
         <div className="sponsors-card">
-            <img class="sponsors-img" src={props.link} alt=""/>
+            <img className="sponsors-img" src={props.link} alt=""/>
         </div>
     );
 }

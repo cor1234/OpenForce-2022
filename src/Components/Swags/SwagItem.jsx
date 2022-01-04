@@ -10,7 +10,7 @@ function SwagItem(props) {
     return (
         <div className={`swag-item${props.mobile ? " swag-item--mobile" : ""}`}>
             <span className={"swag-item-label"}>Wallpaper</span>
-            <CarouselContainer images={props.images} />
+            <CarouselContainer key={props.link} images={props.images} />
             <Btn text={"Download"} onClick={onDownload} />
         </div>
     );

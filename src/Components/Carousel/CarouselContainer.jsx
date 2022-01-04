@@ -20,7 +20,7 @@ function CarouselContainer(props) {
             {props.images.map(
                 (img, i) =>
                     currentImg === i && (
-                        <img src={process.env.PUBLIC_URL + "/images/" + img} />
+                        <img key={i} src={process.env.PUBLIC_URL + "/images/" + img} />
                     )
             )}
             <div className={"carousel-btn"}>

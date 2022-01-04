@@ -6,22 +6,22 @@ export default function Loader(props) {
     return (
         <div className="loaderCont" style={{top:`${props.top}px`}}>
             <div className="subCont">
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
+                <div className="block"></div>
             </div>
         </div>
     );

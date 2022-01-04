@@ -17,7 +17,6 @@ export default function Organization(props) {
             });
 
             var data = (await resp.json()).data;
-            console.log(data);
             setorganization(data);
         }
         getOrg();

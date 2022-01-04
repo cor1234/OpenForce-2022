@@ -29,7 +29,7 @@ export default function Addissue() {
                 top:`${context.showNewIssue?50:-600}px`,
                 width:`${context.showNewIssue?60:0}%`
             }}>
-            <i class="fas fa-times" id="closeNewIssue" onClick={hidenewIssue}></i>
+            <i className="fas fa-times" id="closeNewIssue" onClick={hidenewIssue}></i>
             <form className='newIssueForm' onSubmit={addIssue}>
                 <div>
                     <input type="text" id="newIssuetitle" className='newIssueInput' placeholder='Title'/>
@@ -41,7 +41,7 @@ export default function Addissue() {
                     </select>
                 </div>
                 <div>
-                    <textarea rows={5} class="newIssueDesc" id="newIssueDesc" placeholder='Enter Description'></textarea>
+                    <textarea rows={5} className="newIssueDesc" id="newIssueDesc" placeholder='Enter Description'></textarea>
                 </div>
                 <input type="submit" value="Create" id="createNewIssue" className='newIssueInput'/>
 

@@ -9,7 +9,6 @@ export default function Panel() {
     const userEmail = "_10_eek"
     useEffect(() => {
         const updateOrg = async () => {
-            console.log("fadsdsaf");
             var urlParm = new URL(window.location.href);
 
             const url = `http://localhost:5000/api/org/${urlParm.searchParams.get(
@@ -28,11 +27,9 @@ export default function Panel() {
                 history.push("/error");
                 return;
             }
-            console.log(comp);
             setorgData(comp);
         };
         updateOrg();
-        console.log("adsfdsfsd");
     }, []);
 
     const bookMe = async ()=>{
@@ -58,7 +55,6 @@ export default function Panel() {
         }else{
             var temp = orgData;
             temp.bookedBy.push(userEmail);
-            console.log(temp, orgData);
             setorgData(temp);
             window.alert("Successfuly Registered");
         }
@@ -90,7 +86,7 @@ export default function Panel() {
                     <div>Date : {getFormatedDate(orgData.time)}</div>
                     <div>Booked : {orgData.bookedBy.length}/300</div>
                 </div>
-                <div class="bookpanel">
+                <div className="bookpanel">
                     {orgData.bookedBy.indexOf(userEmail) !== -1 ? (
                         <div className="alreadyBooked">Already Booked</div>
                     ) : orgData.bookedBy.length === 300 ? (

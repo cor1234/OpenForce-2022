@@ -31,16 +31,6 @@
     column-gap: 20px;
     row-gap: 30px;
 }
-#sessions-grid::-webkit-scrollbar{
-    display: inline;
-    height: 4px;
-}
-#sessions-grid::-webkit-scrollbar-thumb{
-    background-color: white;
-}
-#sessions-grid::-webkit-scrollbar-track{
-    background-color: rgba(77, 77, 77, 0.5);
-}
 @media screen and (max-width:1400px) {
     #Sessions{
         padding: 20px 70px;

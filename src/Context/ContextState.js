@@ -7,9 +7,7 @@ const BaseState = (props) => {
     const [organization, setOrganization] = useState([]);
 
     const getOrganization = async () => {
-        console.log("object");
         var org = await callApi("/api/org/", "GET", {});
-        console.log(org);
         if (!org.error) setOrganization(org.data);
         else setOrganization([]);
     };
@@ -36,7 +34,6 @@ const BaseState = (props) => {
                 body: JSON.stringify(data),
             });
         }
-        console.log(url, endpoint);
         const parsed = await resp.json();
         return parsed;
     };
@@ -59,6 +56,10 @@ const BaseState = (props) => {
         return url;
     };
 
+    const alert = (type,message) =>{
+
+    }
+
     return (
         <BaseContext.Provider
             value={{
@@ -67,6 +68,7 @@ const BaseState = (props) => {
                 getOrganization,
                 organization,
                 setOrganization,
+                alert
             }}
         >
             {props.children}

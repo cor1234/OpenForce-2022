@@ -32,7 +32,6 @@ function App() {
                         <SponsorsContainer />
                         <Registration />
                         <TeamContainer />
-                        <FontAwesomeIcon icon={['fab', 'apple']} />
                         <Contact />
                     </Route>
                     <Route exact path={"/swags"}>

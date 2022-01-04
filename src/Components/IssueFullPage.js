@@ -23,13 +23,11 @@ export default function IssueFullPage(props) {
             });
 
             var data = (await resp.json()).data;
-            console.log(data);
             if (!data) {
                 history.push("/error");
                 return;
             }
 
-            console.log(data, "data");
 
             url = `http://localhost:5000/api/org/${urlParm.searchParams.get("id")}`;
             resp = await fetch(url, {
@@ -48,17 +46,14 @@ export default function IssueFullPage(props) {
                 array.push(JSON.parse(i));
             }
             setorgIssue(array);
-            console.log("fsdfasdfsdfssdfsdf", array);
         };
         updateOrg();
     }, []);
 
     useEffect(() => {
-        console.log(orgIssue.issue, "fadfajdsfdklsjf");
     }, [orgIssue]);
 
     useEffect(()=>{
-        console.log("orgData", orgData);
     }, [orgData])
 
     const chgPrefrence = (e) => {
@@ -81,7 +76,7 @@ export default function IssueFullPage(props) {
                         <option>Intermediate</option>
                         <option>Hard</option>
                     </select>
-                    {/* <div class="addNew" onClick={showAddNewIssue}>Add New</div> */}
+                    {/* <div className="addNew" onClick={showAddNewIssue}>Add New</div> */}
                 </div>
             </div>
             <div className="issuesCont">

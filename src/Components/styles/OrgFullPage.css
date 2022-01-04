@@ -124,10 +124,6 @@
     border: 0px;
 }
 
-::-webkit-scrollbar{
-    display: none;
-}
-
 .noIssue{
     height: calc(90vh - 70px);
     color: #EEE9E6;

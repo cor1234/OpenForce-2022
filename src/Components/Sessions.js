@@ -27,8 +27,6 @@ function Sessions() {
         ps.sort((a,b)=>new Date(a.time)<new Date(b.time));
         setSessions(s);
         setPastSessions(ps);
-        console.log({ps},{s});
-        // console.log(sessions,data);
     }, [])
     return (
     <>
@@ -38,10 +36,10 @@ function Sessions() {
         </div>
             <div id="sessions-grid">
                 {sessions.map((session=>{
-                    return <SessionCard session={session}/>
+                    return <SessionCard key={session._id} session={session}/>
                 }))}
                 {pastSessions.map((session=>{
-                    return <SessionCard session={session}/>
+                    return <SessionCard key={session._id} session={session}/>
                 }))}
             </div>
         </div>

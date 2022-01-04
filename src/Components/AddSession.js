@@ -1,8 +1,10 @@
 import React from 'react'
 import './styles/AddSession.css'
-// todo: give a design
+import BaseContext from '../Context/BaseContext';
+import { useContext } from 'react';
 
 const addSession = async e=>{
+    const {alert} = useContext(BaseContext);
     e.preventDefault();
     const sessionname = document.getElementById('sessionname').value;
     const sessionposition = document.getElementById('sessionposition').value;
@@ -16,7 +18,6 @@ const addSession = async e=>{
         "image" : sessionimage,
         "time" : new Date(sessiondate),
     }
-    console.log(body)
     const res = await fetch('http://localhost:5000/api/session/',{
         method:'POST',
         headers:{
@@ -25,7 +26,8 @@ const addSession = async e=>{
         body:JSON.stringify(body)
     }) 
     const data = await res.json();
-    console.log(data);
+    alert("success",`Succesfully book with id ${data.sessionId}`);
+
 }
 function AddSession() {
     return (

@@ -3,7 +3,8 @@ import './styles/SessionCard.css';
 
 const timeFormat= (time)=>{
     const dt = new Date(time);
-    return `${dt.getHours()}:${dt.getMinutes()} on ${dt.getDate()}-${dt.getMonth()}-${dt.getFullYear()}`;
+    const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Sept","Oct","Nov","Dec"]
+    return `${month[dt.getMonth()-1]} ${dt.getDate()}, ${dt.getFullYear()}`;
 }
 
 const bookSession = async (id) =>{
@@ -20,11 +21,9 @@ const bookSession = async (id) =>{
         })
     })
     const data = await res.json();
-    console.log(data);
 }
 function SessionCard(props) {
     const bookingPossible = props.session.seatsAvailable>0 && new Date(props.session.time) > new Date();
-    console.log(new Date(props.session.time),new Date())
     return (
         <div className="SessionCard">
             <div className="session-image">
@@ -40,12 +39,12 @@ function SessionCard(props) {
                 <div className="session-about-description">
                     {props.session.description}
                 </div>
-                {/* <div className="session-seats-remaining">
+                <div className="session-seats-remaining">
                     Seats left : {props.session.seatsAvailable}
                 </div>
                 <div className="session-scheduled-time">
-                    Scheduled at {timeFormat(props.session.time)}
-                </div> */}
+                    Scheduled on {timeFormat(props.session.time)}
+                </div>
             </div>
             <div className="session-book">
                 <div className="session-book-btn" aria-disabled={!bookingPossible} onClick={()=>bookSession(props.session._id)}>{(bookingPossible)?"RSVP":"Bookings unavailable"} </div>

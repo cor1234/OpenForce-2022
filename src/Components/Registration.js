@@ -31,7 +31,6 @@ export default function Registration() {
 
     useEffect(() => {
         if(login === "register"){
-            console.log("object")
             switchCont("passwordCont","Password") 
             switchCont("cpasswordCont","Confirm Password");
             switchCont("register","Register");
@@ -85,7 +84,6 @@ export default function Registration() {
             gender:getGender()
         }
         const url = `http://localhost:5000/api/user/register`;
-        console.log(data);
         var resp = await fetch(url, {
             method: "POST",
             headers: {
@@ -102,7 +100,6 @@ export default function Registration() {
         }
 
         data = resp.jwtTokken;
-        console.log(data, resp);
         localStorage.setItem("jwtTokken", data);
     }
     const loginMe = async ()=>{
@@ -111,7 +108,6 @@ export default function Registration() {
             password : document.getElementById("regcpassword").value,
         }
         const url = `http://localhost:5000/api/user/login`;
-        console.log(data);
         var resp = await fetch(url, {
             method: "POST",
             headers: {
@@ -128,7 +124,6 @@ export default function Registration() {
         }
 
         data = resp.jwtTokken;
-        console.log(data, resp);
         localStorage.setItem("jwtTokken", data);
     }
 
@@ -181,6 +176,7 @@ export default function Registration() {
                         <div className="regInput">
                             <input
                                 type="password"
+                                autoComplete="true"
                                 id="regcpassword"
                                 required={true}
                                 className="regInputField"
