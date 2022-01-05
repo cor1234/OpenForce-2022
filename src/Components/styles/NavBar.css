@@ -84,3 +84,8 @@ nav img {
       left: 0;
     }
   } */
+ 
+  .navOpenBtn{
+    color: white;
+    font-size: 30px;
+  }
