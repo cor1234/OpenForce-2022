@@ -118,33 +118,16 @@
 
 @media screen and (max-width : 500px) {
     #bg-c1{
-        width: 20vh;
+        width: 30vh;
         top: -10%;
-        right: -2%;
+        right: -10%;
+        transform: rotateX(130deg);
+        transform-origin: center;
+        
     }
     #bg-c2{
-        width: 30vh;
-        top: 50%;
-        left: -5%;
-    }
-    #bg-c3{
-        width: 20vh;
-        top: 130%;
-        left: -10%;
-    }
-    #bg-c4{
-        width: 32.5vh;
-        top: 190%;
-        right: -18%;
-    }
-    #bg-c5{
-        width: 35vh;
-        top: 230%;
-        left: -8%;
-    }
-    #bg-c6{
-        width: 20vh;
-        top: 320%;
-        right: -13%;
+        width: 40vh;
+        top: 65%;
+        left: -15%;
     }
 }

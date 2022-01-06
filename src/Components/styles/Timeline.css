@@ -1,94 +1,86 @@
 .timelineCont {
     margin-top: 70px;
     padding: 20px 100px;
+    position: relative;
 }
 
 .tlboxwrap {
     display: flex;
     justify-content: space-around;
-    margin-top: 1.25vw;
+    margin-top: 30px;
+}
+
+.tlfirst{
+    margin-top: 70px;
 }
 
 .tlboxes {
-    width: 30vw;
-    height: 5vw;
-    position: relative;
-    font-size: 2vw;
+    width: 25vw;
+    border: 2px solid #EEE9E6;
+    font-size: 22px;
+    color: #EEE9E6;
     text-align: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    border: 0.2vw solid white;
-    border-radius: 1vw;
-    margin: 0.5vw;
+.dark{
+    width: 30vw;
+    background-color: #EEE9E6;
+    color: #1C232D;
+    position: relative;
 }
 
-#tlbox1 {
-    background-color: white;
-    margin-top: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.dot{
+    content: '';
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    background-color: #EEE9E6;
+    border-radius: 100%;
+    /* position: relative; */
 }
-#tlbox3 {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.dot::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #EEE9E6;
+    border-radius: 100%;
+    top: -5px;
+    left: -5px;
 }
-#tlbox5 {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#tlbox7 {
-    background-color: white;
-    height: 7.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#tlbox9 {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#tlbox2 {
-    color: white;
-    margin-top: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#tlbox4 {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#tlbox6 {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#tlbox8 {
-    color: white;
-    height: 7.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#tlbox10 {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.tlline{
+    position: absolute;
+    height: 80%;
+    bottom: 0px;
+    width: 3px;
+    background-color: #EEE9E6;
+    left: 52%;
 }
 
 @media screen and (max-width: 1400px) {
     .timelineCont {
         padding: 20px 70px;
+    }
+    .tlboxes {
+        width: 30vw;
+    }
+    .dark{
+        width: 35vw;
+    }
+    .dark::after{
+        left: 111.8%;
+    }
+
+    .dark::before{
+        left: calc(111.8% - 5px);
     }
 }
 @media screen and (max-width: 900px) {
@@ -97,5 +89,13 @@
     }
     .tlboxes {
         width: 40vw;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .dark{
+        width: 45vw;
+    }
+    .dot, .tlline{
+        display: none;
     }
 }

@@ -16,7 +16,7 @@ const BaseState = (props) => {
     //type -> POST, GET, PUT etc
     //data is the data to be sent to server
     const callApi = async (endpoint, type, data) => {
-        const url = `http://localhost:5000${endpoint}`;
+        const url = `${endpoint}`;
         let resp;
         if (type == "GET") {
             resp = await fetch(url, {

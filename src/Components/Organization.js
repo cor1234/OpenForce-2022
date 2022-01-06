@@ -8,7 +8,7 @@ export default function Organization(props) {
     const [organization, setorganization] = useState([]);
     useEffect(()=>{
         const getOrg = async ()=>{
-            const url = `http://localhost:5000/api/org/`;
+            const url = `/api/org/`;
             const resp = await fetch(url, {
                 method: "GET",
                 headers: {

@@ -8,6 +8,7 @@
     padding: 20px 0px;
     align-items: center;
     border-radius: 5px;
+    margin: 20px 0px;
 }
 
 .mentorPhoto{
@@ -114,4 +115,69 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width : 1200px) {
+    .bookSeat{
+        width: 65%;
+    }
+}
+
+
+
+@media screen and (max-width : 1000px) {
+    .bookSeat{
+        width: 75%;
+    }
+}
+
+
+@media screen and (max-width : 800px) {
+    .bookSeat{
+        width: 85%;
+        padding: 0px 30px;
+        height: 130px;
+    }
+    .bookpanel div{
+        width: 130px;
+        height: 45px;
+        font-size: 16px;
+        line-height: 45px;
+    }
+}
+
+
+@media screen and (max-width : 500px) {
+    .bookSeat{
+        width: 95%;
+        padding: 0px 25px;
+        height: 130px;
+    }
+    .eventDetail{
+        font-size: 18px;
+    }
+    .bookpanel div{
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .bookSeat{
+        width: 95%;
+        padding: 0px 15px;
+        height: 120px;
+    }
+    .eventDetail{
+        font-size: 16px;
+    }
+    .bookpanel div{
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+    }
 }

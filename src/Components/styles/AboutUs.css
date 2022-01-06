@@ -23,7 +23,14 @@
     width: 80%;
     margin:auto;
 }
-
+.aboutImg{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.aboutImg img{
+    display: block;
+}
 @media screen and (max-width:1200px) {
     .aboutCont{
         width: 55%;

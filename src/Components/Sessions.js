@@ -11,7 +11,7 @@ function Sessions() {
     const [sessions, setSessions] = useState([]);
     const [pastSessions, setPastSessions] = useState([]);
     useEffect(async () => {
-        const res = await fetch('http://localhost:5000/api/session/',{
+        const res = await fetch('/api/session/',{
             method: 'GET',
             headers:{
                 'Content-Type':'application/json'

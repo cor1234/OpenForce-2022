@@ -7,8 +7,16 @@ export default function Registration() {
     const [login, setlogin] = useState("register");
 
     const changeForm = ()=>{
+        var l = document.getElementById("login");
+        if(l) {
+            l.setAttribute("disabled",true);
+            setTimeout(()=>{
+                if(l) l.removeAttribute("disabled");
+            },1500)
+        }
         if(login === "register") setlogin("login");
         else setlogin("register");
+
     }
 
     const switchCont = (id, cont)=>{
@@ -83,7 +91,7 @@ export default function Registration() {
             college : document.getElementById("regcollege").value,
             gender:getGender()
         }
-        const url = `http://localhost:5000/api/user/register`;
+        const url = `/api/user/register`;
         var resp = await fetch(url, {
             method: "POST",
             headers: {
@@ -107,7 +115,7 @@ export default function Registration() {
             email : document.getElementById("regpassword").value,
             password : document.getElementById("regcpassword").value,
         }
-        const url = `http://localhost:5000/api/user/login`;
+        const url = `/api/user/login`;
         var resp = await fetch(url, {
             method: "POST",
             headers: {

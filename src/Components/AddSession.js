@@ -18,7 +18,7 @@ const addSession = async e=>{
         "image" : sessionimage,
         "time" : new Date(sessiondate),
     }
-    const res = await fetch('http://localhost:5000/api/session/',{
+    const res = await fetch('/api/session/',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'

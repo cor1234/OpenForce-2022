@@ -79,12 +79,11 @@ function Contact() {
                                 <span>Email</span>
                             </div>
                             <div className="inputBox">
-                                <textarea required="required"></textarea>
+                                <input type="text" required="required"></input>
                                 <span>Type Your message</span>
                             </div>
                             <div className="inputBox">
-
-                                <button type="submit">{status}</button>
+                                <button id="submit-contact-form">{status}</button>
                             </div>
                         </form>
                     </div>

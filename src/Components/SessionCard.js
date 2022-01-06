@@ -10,7 +10,7 @@ const timeFormat= (time)=>{
 const bookSession = async (id) =>{
     // todo: check if user is signed in and get `userId`
     let userId = null; // this userId will currently be giving error because it can't be found be the db
-    const res = await fetch('http://localhost:5000/api/session/book',{
+    const res = await fetch('/api/session/book',{
         method: 'PUT',
         headers: {
             'Content-Type':'application/json'

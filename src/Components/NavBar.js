@@ -39,7 +39,7 @@ function NavBar() {
                     <a className="nav-item px-3" href="/#sponserLink">
                         <p className="nav-link text-light">Sponsors</p>
                     </a>
-                    <a className="nav-item px-3" href="#">
+                    <a className="nav-item px-3" href="#faqclick">
                         <p className="nav-link text-light">FAQs</p>
                     </a>
                     <a className="nav-item px-3" href="/#reg">
